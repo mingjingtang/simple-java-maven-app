@@ -29,5 +29,11 @@ pipeline {
                     sh './jenkins/scripts/deliver.sh' 
                 }
             }
+            stage('jmeter') { 
+                steps {
+                    //sh './jenkins/scripts/deliver.sh' 
+                    build job: 'project_2'
+                }
+            }
     }
 }
